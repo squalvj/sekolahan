@@ -12,5 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/siswa/register', 'crud@index');
+Route::get('/login', function(){
+	return view('auth.login');
+});
+
+Route::resource('siswa', 'crud');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

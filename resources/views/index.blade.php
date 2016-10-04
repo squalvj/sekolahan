@@ -4,10 +4,10 @@
   <title>Sekolahan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap/css/ihover.min.css">
+  <link rel="stylesheet" href="{!! asset('assets/bower_components/css/bootstrap.min.css') !!}">
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="stylesheet" href="icon/styles.css">
+  <link rel="stylesheet" href="{!! asset('assets/bower_components/css/styles.css') !!}">
+  <link rel="stylesheet" href="{!! asset('assets/bower_components/css/ihover.css') !!}">
   <style>
     body {
     font: 20px "Montserrat", sans-serif;
@@ -87,36 +87,36 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative; padding-bottom:0px">
     <nav class="navbar navbar-default navbar-fixed-top" style="height:60px; padding-top:5px;">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">SMA PEDULI KASIH</a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
-          <li><a href="#bg-hitam">Siapa Kita</a></li>
-          <li><a href="#bg-ungu">Fasilitas</a></li>
-          <li><a href="#bg-putih">Pelayanan Siswa</a></li>
-        </ul>
-      </div>
-    </div>
-</nav>  
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">SMA PEDULI KASIH</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
+              <li><a href="#bg-hitam">Siapa Kita</a></li>
+              <li><a href="#bg-ungu">Fasilitas</a></li>
+              <li><a href="#bg-putih">Pelayanan Siswa</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>  
 
 
     <div class="container-fluid text-center" id="bg-ijo" style="margin-top:30px">
         <h3>Who Are We?</h3>
-        <img class="img-responsive img-circle" style="display:inline" src="gambar/school.jpg" alt="Bird">
+        <img class="img-responsive img-circle" style="display:inline" src="{!! asset('assets/gambar/school.jpg') !!}" alt="Bird">
         <h3>SMA SUKA KASIHAN</h3>
     </div>
 
     <div class="container-fluid" id="bg-hitam" style="padding-bottom:0px;">
         <div class="row">
     <div class="col-sm-4 col-xs-4">
-        <img class="img-responsive" src="gambar/guru.png">
+        <img class="img-responsive" src="{!! asset('assets/gambar/guru.png') !!}">
     </div>
 
     <div class="col-sm-8 col-xs-8" style="padding: 5px 30px;">
@@ -132,44 +132,45 @@
         <h3>Fasilitas</h3>
         <div class="row">
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/bus.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="
+                {!! asset('assets/gambar/bus.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Bus Sekolah</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/kimia.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/kimia.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Laboratorium</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/tas.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/tas.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Tas</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/sertifikat.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/sertifikat.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Sertifikat</h3>
             </div>
         </div>
 
         <div class="row" style="margin-top:50px">
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/ide.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/ide.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Kreatif</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/penggaris.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/penggaris.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Peralatan</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/jam.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/jam.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Tertib</h3>
             </div>
 
             <div class="col-sm-3 col-xs-3 text-center">
-                <img style="width:250px;height:200px; border: 6px solid white" src="gambar/buku.png" class="img-responsive img-circle center-block" alt="Image">
+                <img style="width:250px;height:200px; border: 6px solid white" src="{!! asset('assets/gambar/buku.png') !!}" class="img-responsive img-circle center-block" alt="Image">
                 <h3>Buku</h3>
             </div>
         </div>
@@ -180,28 +181,39 @@
       <div style="padding-top: 5%" class="row">
         <div class="col-sm-4 col-xs-4">
           <h4>Login<h4>
-                <div class="ih-item square effect6 from_top_and_bottom" style="width:100%; border:0px; box-shadow:none">
-                    <a href="#" data-toggle="modal" data-target="#modal-login">
-                <div class="img img-responsive center-block kecil">
-                    <img src="gambar/otak.png" alt="img">
-                </div>
-                <div class="info">
-                  <h3>Login Siswa</h3>
-                  <p>Bagi yang sudah mempunyai akun silahkan klik disini untuk login</p>
-                </div>
-            </a>
-        </div>
+            <div class="ih-item square effect6 from_top_and_bottom" style="width:100%; border:0px; box-shadow:none">
+                <a href="#" data-toggle="modal" data-target="#modal-login">
+                    <div class="img img-responsive center-block kecil">
+                        <img src="{!! asset('assets/gambar/otak.png') !!}" alt="img">
+                    </div>
+                    <div class="info">
+                      <h3>Login Siswa</h3>
+                      <p>Bagi yang sudah mempunyai akun silahkan klik disini untuk login</p>
+                    </div>
+                </a>
+            </div>
         
 
 
         </div>
         <div class="col-sm-4 col-xs-4">
-          <h4>Materi<h4>
-          <img class="kecil" src="gambar/buku.png" alt="Image">
+          <h4>Register<h4>
+          <div class="ih-item square effect6 from_top_and_bottom" style="width:100%; border:0px; box-shadow:none">
+                <a href="{{URL::to('siswa/register')}}">
+                    <div class="img img-responsive center-block kecil">
+                        <img class="kecil" src="{!! asset('assets/gambar/buku.png') !!}" alt="Image">
+                    </div>
+                    <div class="info">
+                      <h3>Resiger Siswa</h3>
+                      <p>Untuk Register Siswa</p>
+                    </div>
+                </a>
+            </div>
+          
         </div>
         <div class="col-sm-4 col-xs-4">
           <h4>Fasilitas<h4>
-          <img class="kecil" src="gambar/bus.png" alt="Image">
+          <img class="kecil" src="{!! asset('assets/gambar/bus.png') !!}" alt="Image">
         </div>
       </div>
     </div>
@@ -222,9 +234,6 @@
                 <span class="icon-social-github"></span>
             </a>
         </div>
-        <script>
-            w3IncludeHTML();
-        </script>
 
         <div id="modal-login" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -235,7 +244,7 @@
                 <h4 class="modal-title">Login Siswa</h4>
               </div>
               <div class="modal-body">
-                <form autocomplete="off" action="login_siswa.php" method="post">
+                {{ Form::open(array('route' => 'siswa.store','method'=>'POST')) }}
                     <div class="form-group">
                             <label for="id">ID Siswa</label>
                             <input type="text" class="form-control" id="id" placeholder="ID Siswa" name="id">
@@ -249,7 +258,7 @@
                          <div class="form-group text-center">        
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
                          </div>
-                </form>
+                {{ Form::close() }}
               </div>
               <div class="modal-footer" style="background-color: #2ecc71;">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -258,4 +267,8 @@
         </div>
         </div>
     </footer>
+    <script src="{!! asset('assets/bower_components/js/jquery.min.js') !!}"></script>
+    <script src="{!! asset('assets/bower_components/js/bootstrap.min.js') !!}"></script>
+   <!--  <script src="{!! asset('assets/bower_components/js/npm.js') !!}"></script> -->
+
 </html>
