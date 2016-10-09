@@ -41,7 +41,7 @@ class Crud extends Controller
     public function store(Request $request)
     {
         if (count($request->interest) > 0){
-            $interest = implode(',', $request->interest);
+            $interest = implode(',', $request->interest); //cara jadiin array ke string di pisahin pake koma
             $siswa = new Siswa;
             $siswa->nama = $request->nama;
             $siswa->alamat = $request->alamat;

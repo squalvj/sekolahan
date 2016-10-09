@@ -16,15 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/siswa/register', 'crud@index');
-Route::get('/login', function(){
-	return view('auth.login');
-});
 
 Route::resource('siswa', 'crud');
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
 Route::get('/home', 'HomeController@index');
