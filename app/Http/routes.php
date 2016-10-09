@@ -23,8 +23,3 @@ Route::get('/login', function(){
 Route::resource('siswa', 'crud');
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
