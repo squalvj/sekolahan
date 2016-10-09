@@ -86,27 +86,7 @@
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative; padding-bottom:0px">
-    <nav class="navbar navbar-default navbar-fixed-top" style="height:60px; padding-top:5px;">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#">SMA PEDULI KASIH</a>
-        </div>
-        <div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
-              <li><a href="#bg-hitam">Siapa Kita</a></li>
-              <li><a href="#bg-ungu">Fasilitas</a></li>
-              <li><a href="#bg-putih">Pelayanan Siswa</a></li>
-            </ul>
-          </div>
-        </div>
-    </nav>  
-
-
+    @include('section.nav')
     <div class="container-fluid text-center" id="bg-ijo" style="margin-top:30px">
         <h3>Who Are We?</h3>
         <img class="img-responsive img-circle" style="display:inline" src="{!! asset('assets/gambar/school.jpg') !!}" alt="Bird">
@@ -244,20 +224,25 @@
                 <h4 class="modal-title">Login Siswa</h4>
               </div>
               <div class="modal-body">
-                {{ Form::open(array('route' => 'siswa.store','method'=>'POST')) }}
+                {{ Form::open(array('url' => 'login','method'=>'POST')) }}
                     <div class="form-group">
+                            @if ($errors->has('email'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                             <label for="id">ID Siswa</label>
-                            <input type="text" class="form-control" id="id" placeholder="ID Siswa" name="id">
-                        </div>
+                            <input type="text" class="form-control" id="id" placeholder="ID Siswa" name="email">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="pwd">Password</label>
-                            <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
-                        </div>
-                        <br>
-                         <div class="form-group text-center">        
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-                         </div>
+                    <div class="form-group">
+                        <label for="pwd">Password</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Password" name="password">
+                    </div>
+                    <br>
+                    <div class="form-group text-center">        
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </div>
                 {{ Form::close() }}
               </div>
               <div class="modal-footer" style="background-color: #2ecc71;">
@@ -269,6 +254,16 @@
     </footer>
     <script src="{!! asset('assets/bower_components/js/jquery.min.js') !!}"></script>
     <script src="{!! asset('assets/bower_components/js/bootstrap.min.js') !!}"></script>
-   <!--  <script src="{!! asset('assets/bower_components/js/npm.js') !!}"></script> -->
+    <!--  <script src="{!! asset('assets/bower_components/js/npm.js') !!}"></script> -->
+    @if ($errors->has('email'))
+      <script type="text/javascript">
 
+        $(document).ready(function(){
+            $('#modal-login').modal({
+                show: true
+            });
+        });
+    </script>
+    @endif
+    
 </html>

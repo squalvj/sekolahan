@@ -8,7 +8,9 @@ use App\Http\Requests;
 
 class siswa extends Controller
 {
-    public function register(){
-    	return view('siswa/register');
-    }
+   protected $id;
+
+   public function login(Requests $req){
+   		
+   }
 }
