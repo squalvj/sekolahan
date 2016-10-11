@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'siswa' =>  [
+        'driver'   => 'session',
+        'provider' => 'siswa',
+        ],
     ],
 
     /*
@@ -70,6 +75,10 @@ return [
             'model' => App\User::class,
         ],
 
+        'siswa' =>  [
+            'driver' => 'eloquent',
+            'model'  => App\Doctor::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

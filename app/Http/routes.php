@@ -20,3 +20,20 @@ Route::get('/siswa/register', 'crud@index');
 Route::resource('siswa', 'crud');
 Route::auth();
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login', function() {
+ 
+    $auth = Auth::guard('siswa'); // Atau \Auth::guard('doctor')
+ 
+    $credentials = [
+        'nip' =>  '04324321', // Nomor Induk Pegawai
+        'password' =>  'sate',
+    ];
+ 
+    if ($auth->attempt($credentials)) {
+        return 'Yay! Berhasil login (^o^)/';
+    }
+ 
+    return 'Gagal login.';
+ 
+});

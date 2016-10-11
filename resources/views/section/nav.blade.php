@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
     </button>
-    <a class="navbar-brand" href="#">SMA PEDULI KASIH</a>
+    <a class="navbar-brand" href="{{URL::to('/')}}">SMA PEDULI KASIH</a>
   </div>
   <div>
     <div class="collapse navbar-collapse" id="myNavbar">

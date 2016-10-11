@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\siswa;
+use App\Siswa;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -48,6 +48,7 @@ class Crud extends Controller
             $siswa->handphone = $request->handphone;
             $siswa->gender = $request->gender;
             $siswa->interest = $interest;
+            $siswa->password = $request->password;
             $siswa->save();
         }else{
             return Redirect::back()->withErrors(['Minimal Harus Mengisi 1 interest']);

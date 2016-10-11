@@ -74,25 +74,8 @@
         color: #ecf0f1 !important;
         }
 </style>
-<nav class="navbar navbar-default navbar-fixed-top" style="height:60px; padding-top:5px;">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-    <a class="navbar-brand" href="/">SMA PEDULI KASIH</a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right" style="padding-right:20px">
-          <li><a href="#bg-hitam">Siapa Kita</a></li>
-          <li><a href="#bg-ungu">Fasilitas</a></li>
-          <li><a href="#bg-putih">Pelayanan Siswa</a></li>
-        </ul>
-      </div>
-    </div>
-</nav>
+</head>
+@include('section.nav')
 <div class="container-fluid " style="padding-top:7%">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -117,6 +100,10 @@
                 <div class="form-group">
                     Nama
                 </div>
+                    
+                <div class="form-group">
+                    Password
+                </div>    
 
                 <div class="form-group">
                     Jenis Kelamin
@@ -138,6 +125,10 @@
             <div class="col-sm-8">
                 <div class="form-group">
                     <input type="text" class="form-control" name="nama" placeholder="Masukan Nama">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="Masukan Nama">
                 </div>
 
                 <div class="radio-inline">
